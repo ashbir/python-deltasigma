@@ -89,9 +89,9 @@ The test suite requires
 used to access the reference function outputs.
 
 Testing can be automated with
-**[nose](https://pypi.python.org/pypi/nose/)**, issuing:
+**[pytest](https://pypi.python.org/pypi/pytest/)**, issuing:
 
-    nosetests -v deltasigma
+    pytest -v deltasigma
 
 ## Documentation
 
