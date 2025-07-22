@@ -33,10 +33,10 @@ from ._utils import _get_zpk
 
 def simulateSNR(arg1, osr, amp=None, f0=0, nlev=2, f=None, k=13,
                 quadrature=False):
-    """Determine the SNR for a delta-sigma modulator by using simulations.
+    r"""Determine the SNR for a delta-sigma modulator by using simulations.
 
     Simulate a delta-sigma modulator with sine wave inputs of various
-    amplitudes and calculate the signal-to-noise ratio (SNR) in dB for each 
+    amplitudes and calculate the signal-to-noise ratio (SNR) in dB for each
     input.
 
     Three alternative descriptions of the modulator can be used:
@@ -44,7 +44,7 @@ def simulateSNR(arg1, osr, amp=None, f0=0, nlev=2, f=None, k=13,
      * The modulator is described by a noise transfer function (NTF), provided
        as ``arg1`` and the number of quantizer levels (``nlev``).
 
-     * Alternatively, the first argument to simulateSNR may be an ABCD matrix. 
+     * Alternatively, the first argument to simulateSNR may be an ABCD matrix.
 
      * Lastly, ``arg1`` may be a function taking the input signal as its
        sole argument.
@@ -83,8 +83,9 @@ def simulateSNR(arg1, osr, amp=None, f0=0, nlev=2, f=None, k=13,
         The over-sampling ratio.
 
     amp : sequence, optional
-        The amplitudes in dB, referred to the FS, for which the SNR is to be 
-        evaluated. ``amp`` defaults to [-120 -110...-20 -15 -10 -9 -8 ... 0]dB,
+        The amplitudes in dB, referred to a full-scale, for which the SNR is
+        to be evaluated. ``amp`` defaults to
+        ``[-120, -110, ..., -20, -15, -10, -9, ..., 0]`` dB,
         where 0 dB means a full-scale (peak value = nlev-1) sine wave.
 
     f0 : float, optional
@@ -125,7 +126,7 @@ def simulateSNR(arg1, osr, amp=None, f0=0, nlev=2, f=None, k=13,
 
     .. rubric:: Example:
 
-    Compare the SNR vs input amplitude curve for a fifth-order modulator, as 
+    Compare the SNR vs input amplitude curve for a fifth-order modulator, as
     computed by the describing function method (:func:`predictSNR`) with
     that determined by simulation (:func:`simulateSNR`).::
 
