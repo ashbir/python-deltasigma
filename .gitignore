@@ -54,3 +54,8 @@ nosetests.xml
 ehthumbs.db
 Icon?
 Thumbs.db
+
+# Virtual Environment
+#####################
+venv
+.venv
