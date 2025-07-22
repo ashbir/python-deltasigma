@@ -4,6 +4,7 @@ import numpy as np
 import deltasigma as ds
 import scipy.io
 from importlib.resources import files
+from deltasigma._utils import mround
 
 
 class TestBplogsmooth(unittest.TestCase):
