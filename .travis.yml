@@ -26,12 +26,12 @@ before_install:
 install:
   - conda create --quiet --yes -n buildenv python=$TRAVIS_PYTHON_VERSION
   - source activate buildenv
-  - conda install --yes numpy scipy matplotlib cython nose setuptools coverage
+  - conda install --yes numpy scipy matplotlib cython setuptools coverage pytest pytest-cov
   - pip install python-coveralls
   - python setup.py install
 
 # Run the tests
-script: nosetests --with-coverage --cover-package=deltasigma deltasigma
+script: pytest --cov=deltasigma deltasigma
 
 # Calculate coverage
 after_success:
