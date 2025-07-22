@@ -37,7 +37,10 @@ class TestDB(unittest.TestCase):
         self.r3 = 3.01029996, 3.01029996
         # db voltage - undbv
         self.tv4 = np.array([3.0])
-        pass
+        self.tv5 = 0
+        self.r5 = -np.inf
+        self.tv6 = np.array([0, 1])
+        self.r6 = np.array([-np.inf, 0])
 
     def test_db_1(self):
         """Test function for db() 1/6"""
@@ -56,18 +59,16 @@ class TestDB(unittest.TestCase):
 
     def test_db_4(self):
         """Test function for db() 4/6"""
-        res = ds.undbv(ds.db(self.tv4, 'voltage'))
+        res = ds.undbv(ds.dbv(self.tv4))
         self.assertTrue(np.allclose(self.tv4, res, atol=1e-8, rtol=1e-5))
 
-    #@raises(ValueError)
     def test_db_5(self):
         """Test function for db() 5/6"""
-        with self.assertRaises(ValueError):
-            res = ds.db([1], 'wrong')
+        res = ds.db(self.tv5)
+        self.assertTrue(np.allclose(self.r5, res, atol=1e-8, rtol=1e-5))
 
     def test_db_6(self):
         """Test function for db() 6/6"""
-        res = ds.db(self.tv1, 'power', R=100)
-        # the R value should be ignored (warning only)
-        self.assertTrue(np.allclose(self.r1, res, atol=1e-8, rtol=1e-5))
+        res = ds.db(self.tv6)
+        self.assertTrue(np.allclose(self.r6, res, atol=1e-8, rtol=1e-5))
 
