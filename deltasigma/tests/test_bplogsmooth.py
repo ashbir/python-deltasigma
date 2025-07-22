@@ -3,16 +3,14 @@ import unittest
 import numpy as np
 import deltasigma as ds
 import scipy.io
-import pkg_resources
-from deltasigma._utils import mround
+from importlib.resources import files
 
 
 class TestBplogsmooth(unittest.TestCase):
     """Test class for bplogsmooth()"""
 
     def setUp(self):
-        fname = pkg_resources.resource_filename(
-            __name__, "test_data/test_bplogsmooth.mat")
+        fname = files('deltasigma.tests.test_data').joinpath('test_bplogsmooth.mat')
         self.data = scipy.io.loadmat(fname)
         f0 = 1./8
         OSR = 64
