@@ -36,6 +36,8 @@ it is very heavily based.
 [![Build Status](https://travis-ci.org/Y-F-Acoustics/python-deltasigma.svg?branch=master)](https://travis-ci.org/Y-F-Acoustics/python-deltasigma)
 [![Coverage Status](https://coveralls.io/repos/github/Y-F-Acoustics/python-deltasigma/badge.svg?branch=master)](https://coveralls.io/github/Y-F-Acoustics/python-deltasigma?branch=master)
 [![BSD 2 clause license](http://img.shields.io/badge/license-BSD-brightgreen.png)](https://raw.githubusercontent.com/ggventurini/python-deltasigma/master/LICENSE)
+[![BSD 2 clause license](http://img.shields.io/badge/license-BSD-brightgreen.png)](https://raw.githubusercontent.com/ashbir/python-deltasigma/master/LICENSE)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.png)](https://raw.githubusercontent.com/ashbir/python-deltasigma/master/LICENSE-MIT)
 
 
 ***
@@ -171,7 +173,6 @@ subject to the same license terms.
 This package contains some source code from `pydsm`, also based on the same
 MATLAB toolbox. The `pydsm` package is copyright (c) 2012, Sergio Callegari.
 
-When not otherwise specified, the Python code is Copyright 2013, Giuseppe
-Venturini and the python-deltasigma contributors.
+When not otherwise specified, the Python code is Copyright 2025, Ashbir Aviat Fadila and the python-deltasigma contributors.
 
 MATLAB is a registered trademark of The MathWorks, Inc.

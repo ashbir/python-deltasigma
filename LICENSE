@@ -13,7 +13,7 @@ same MATLAB toolbox. The pydsm package is copyright (c) 2012, Sergio Callegari.
 When not otherwise specified, the source code is Copyright 2013,
 Giuseppe Venturini and the python-deltasigma contributors.
 
-This work includes further modifications by Yuki Fukuda.
+This work includes further modifications by Yuki Fukuda and Ashbir Aviat Fadila.
 
 Modifications and new code are licensed under the MIT license. See the
 file LICENSE-MIT for details.
